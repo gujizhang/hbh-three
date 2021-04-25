@@ -1,0 +1,62 @@
+page{
+    background-color:rgb(234, 234, 238);
+}
+.my {
+    .myinfo {
+      width:96%;
+      height: 280rpx;
+      display: flex;
+      align-items: center;
+      color: rgb(16, 114, 7);
+      border-radius: 50rpx;
+      margin:10rpx auto;
+      padding: 10rpx;
+      background: rgb(100, 209, 158);
+      box-sizing: border-box;
+      image {
+        height: 148rpx;
+        width: 148rpx;
+        border-radius: 50rpx;
+      }
+      view {
+        margin-left: 30rpx;
+        
+      }
+    }
+    .iconfont{
+        color: rgb(74, 139, 8);
+    }
+    .iconlist {
+      display: flex;
+      align-items: center;
+      background:rgb(255, 255, 255);
+      border-radius: 50rpx;
+      width: 96%;
+      margin:10rpx auto;
+      flex-wrap: wrap;
+      view {
+        width: 33.33%;
+        padding: 50rpx 0;
+        text-align: center;
+        border-right: 1rpx solid rgba(0, 0, 0, .15);
+        border-bottom: 1rpx solid rgba(0, 0, 0, .15);
+        box-sizing: border-box;
+        view {
+          display: block;
+        }
+        view:nth-child(1) {
+          margin-bottom: 10rpx;
+        }
+      }
+      view:nth-child(3n+3) {
+        border-right: none;
+      }
+      view:nth-last-child(1) {
+        border-bottom: none;
+      }
+      view:nth-last-child(2) {
+        border-bottom: none;
+      }
+    }
+  }
+  

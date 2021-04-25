@@ -1,0 +1,16 @@
+
+<view class="my">
+    <view class="myinfo">
+      <image src="{{avator}}"/>
+      <view>
+        <view wx:if="{{userInfo.nickName}}">欢迎 {{userInfo.nickName}}</view>
+        <view wx:else>点击登录</view>
+      </view>
+    </view>
+    <view class="iconlist">
+      <view bind:taview="goTo" wx:for="{{listData}}" wx:key="index">
+        <text  class="iconfont {{item.icon}}" style='font-size:24px; padding:0 10rpx;'></text>
+        <text>{{item.title}}</text>
+      </view>
+    </view>
+</view>

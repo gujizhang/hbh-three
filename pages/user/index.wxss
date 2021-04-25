@@ -1,0 +1,58 @@
+page {
+  background-color: #eaeaee;
+}
+.my .myinfo {
+  width: 96%;
+  height: 280rpx;
+  display: flex;
+  align-items: center;
+  color: #107207;
+  border-radius: 50rpx;
+  margin: 10rpx auto;
+  padding: 10rpx;
+  background: #64d19e;
+  box-sizing: border-box;
+}
+.my .myinfo image {
+  height: 148rpx;
+  width: 148rpx;
+  border-radius: 50rpx;
+}
+.my .myinfo view {
+  margin-left: 30rpx;
+}
+.my .iconfont {
+  color: #4a8b08;
+}
+.my .iconlist {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 50rpx;
+  width: 96%;
+  margin: 10rpx auto;
+  flex-wrap: wrap;
+}
+.my .iconlist view {
+  width: 33.33%;
+  padding: 50rpx 0;
+  text-align: center;
+  border-right: 1rpx solid rgba(0, 0, 0, 0.15);
+  border-bottom: 1rpx solid rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+}
+.my .iconlist view view {
+  display: block;
+}
+.my .iconlist view view:nth-child(1) {
+  margin-bottom: 10rpx;
+}
+.my .iconlist view:nth-child(3n+3) {
+  border-right: none;
+}
+.my .iconlist view:nth-last-child(1) {
+  border-bottom: none;
+}
+.my .iconlist view:nth-last-child(2) {
+  border-bottom: none;
+}

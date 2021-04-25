@@ -1,0 +1,150 @@
+<!--pages/goods_detail/index.wxml-->
+
+<import src="../../components/wxParse/wxParse.wxml"/> 
+
+<view>
+  <view class="goods">
+    <view class="swiper">
+        <swiper indicator-active-color="#08C364" indicator-dots="ture" class="swiper-container" autoplay="true" interval="3000" duration="1000">
+            <view wx:for="{{gallery}}" wx:key="index">
+            <swiper-item class="swiper-item">
+                <image src="{{item.img_url}}" class="slide-image" />
+            </swiper-item>
+            </view>
+        </swiper>
+        <button class="share" hover-class="none" open-type="share">分享商品</button>
+    </view>
+    <view class="sgs">
+      <view class="swiper-b">
+          <view class="item">30天无忧退货</view>
+          <view class="item">48小时快速退款</view>
+          <view class="item">满88元免邮费</view>
+      </view>
+      <view class="goods-info">
+        <view class="c">
+            <p>{{info.name}}</p>
+            <p>{{info.goods_brief}}</p>
+            <p>¥{{info.retail_price}}</p>
+            <p>{{brand.name}}</p>
+
+        </view>
+      </view>
+      <view  class="section-nav" bind:tap="showType">
+        <image class="" src="../../icons/选择.png" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+          
+        <view>请选择规格数量</view>
+      </view>
+    </view>
+      
+   
+
+    <!-- 商品参数 -->
+    <view class="attribute">
+      <view class="contain">
+        <view class="head">
+          商品参数
+        </view>
+        <view class="item" wx:for="{{attribute}}" wx:key="index">
+          <view>{{item.name}}</view>
+          <view>{{item.value}}</view>
+          
+        </view>
+      </view>
+        
+    </view>
+
+    <!-- 图片展示 -->
+    <view class="detail" wx:if="{{goods_desc}}">
+      <!-- <wxParse content="{{goods_desc}}" /> -->
+      <view class="title">
+        商品详情
+      </view>
+        
+      <template is="wxParse" data="{{wxParseData:article.nodes}}">
+      </template>
+      <!-- 这里data中article为bindName -->
+    </view>
+
+    <!-- 常见问题 -->
+    <view class="common-problem">
+      <view class="h">
+        <text class="title">常见问题</text>
+      </view>
+      <view class="b">
+        <view class="item" wx:for="{{issueList}}" wx:key="index">
+          <view class="question-box">
+            <text class="spot"></text>
+            <text class="question">{{item.question}}</text>
+          </view>
+          <view class="answer">{{item.answer}}</view>
+        </view>
+      </view>
+    </view>
+
+
+   
+    <!-- 大家都在看 -->
+    <view class="common-problem">
+      <view class="h">
+        <text class="title">大家都在看</text>
+      </view>
+      <view class="sublist">
+        <navigator 
+         wx:for="{{productList}}" 
+         wx:key="index" 
+         wx:for-item="item2"
+         url="../goods_detail/index?id={{item2.id}}"
+        >
+          <image src="{{item2.list_pic_url}}" alt=""></image>
+          <view class="name">{{item2.name}}</view>        
+          <view class="price">¥{{item2.retail_price}}</view>
+        </navigator>
+      </view>
+    </view>
+   
+
+    <!-- footer -->
+    <view class="bottom-fixed">
+      <view class="collect-box" bind:tap="collect">
+        <view class="collect">
+             <image class="" src="../../icons/收藏.png" mode="widthFix"  />
+          </view>
+      </view>
+      <view class="car-box" bind:tap="toCart">
+        <view class="car" >
+          <span>{{allnumber}}</span>
+          <image src="/../../icons/购物.png" alt=""></image>
+        </view>
+      </view>
+      <view catch:tap="buy">立即购买</view>
+      <view catch:tap="addCart">加入购物车</view>
+    </view>
+
+    <!-- 选择规格的弹出层 -->
+    <view class="pop" wx:if="{{showpop}}" bind:tap="showType">
+     <view class="attr-pop">
+        <view class="top">
+          <view class="left">
+            <image src="{{info.primary_pic_url}}" alt=""></image>
+          </view>
+          <view class="right">
+            <view>
+              <p>价格¥{{info.retail_price}}</p>
+              <p>请选择数量</p> 
+            </view>
+          </view>
+          <view class="close" catch:tap="showType">✖️</view>
+        </view>
+        <view class="b">
+          <p>数量</p> 
+          <view class="count" catch:touchmove="preventD">
+            <view class="cut" catch:tap="reduce">-</view>
+            <input type="text" class="number"  disabled="false" value="{{number}}"></input>
+            <view class="add" catch:tap="add">+</view>
+          </view>
+        </view>
+      </view>
+     </view>
+    </view>
+    
+</view>

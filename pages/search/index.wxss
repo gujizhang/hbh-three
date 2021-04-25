@@ -1,0 +1,190 @@
+.search {
+  height: 100vh;
+  position: relative;
+}
+.search .head {
+  height: 91rpx;
+  display: flex;
+  padding: 0 32rpx;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border-bottom: 1rpx solid rgba(0, 0, 0, 0.15);
+}
+.search .head view:nth-child(1) {
+  height: 59rpx;
+  display: flex;
+  align-items: center;
+  background: #f4f4f4;
+}
+.search .head view:nth-child(1) image {
+  display: inline-block;
+  width: 31rpx;
+  height: 31rpx;
+  padding: 0 20rpx;
+}
+.search .head view:nth-child(1) input {
+  display: inline-block;
+  width: 480rpx;
+  height: 59rpx;
+  margin-left: 10rpx;
+}
+.search .head view:nth-child(1) .del {
+  width: 53rpx;
+  height: 53rpx;
+  padding: 0;
+}
+.search .head view:nth-child(2) {
+  flex: 1;
+  text-align: center;
+}
+.search .searchtips {
+  position: absolute;
+  width: 100%;
+  top: 91rpx;
+  left: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  padding: 0 32rpx;
+  z-index: 9;
+  background: #fff;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.search .searchtips view view {
+  padding: 20rpx 0;
+}
+.search .searchtips .nogoods {
+  text-align: center;
+  margin: 200rpx;
+}
+.search .history {
+  background: #fff;
+  padding: 50rpx;
+}
+.search .history .t {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+  color: #108f54;
+}
+.search .history .t .contain {
+  width: 150rpx;
+  height: 100rpx;
+  display: flex;
+  border-radius: 30rpx;
+  justify-content: center;
+  align-items: center;
+  background-color: #8be2b7;
+}
+.search .history .t view:nth-child(2) {
+  border-radius: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100rpx;
+  width: 400rpx;
+  background-color: aquamarine;
+}
+.search .history .cont {
+  display: flex;
+  flex-wrap: wrap;
+  color: cadetblue;
+}
+.search .history .cont view {
+  padding: 10rpx;
+  border: 1rpx solid #66d679;
+  border-radius: 10rpx;
+  margin: 0 30rpx 20rpx 0;
+}
+.search .history .cont .active {
+  border: 1rpx solid #b4282d;
+  color: #b4282d;
+}
+.search .hotsearch {
+  margin-top: 20rpx;
+}
+.search .goodsList {
+  position: absolute;
+  width: 100%;
+  top: 91rpx;
+  left: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  padding: 0 32rpx;
+  z-index: 9;
+  background: #fff;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.search .goodsList .sortnav {
+  display: flex;
+  height: 78rpx;
+  line-height: 78rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #d9d9d9;
+}
+.search .goodsList .sortnav view {
+  width: 60%;
+  height: 100%;
+  text-align: center;
+}
+.search .goodsList .sortnav .active {
+  color: #094624;
+  border-bottom: #32a780;
+  border-bottom-width: 10rpx;
+  border-bottom-style: solid;
+}
+.search .goodsList .sortnav .price {
+  background-size: 15rpx 21rpx;
+}
+.search .goodsList .sortnav .active.desc {
+  background-size: 15rpx 21rpx;
+}
+.search .goodsList .sortnav .active.asc {
+  background-size: 15rpx 21rpx;
+}
+.search .goodsList .sortlist {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.search .goodsList .sortlist .item {
+  box-sizing: border-box;
+  width: 50%;
+  text-align: center;
+  background-color: #fff;
+  padding: 15rpx 0;
+  border-bottom: 1rpx solid #d9d9d9;
+  border-right: 1rpx solid #d9d9d9;
+}
+.search .goodsList .sortlist .item image {
+  display: block;
+  width: 302rpx;
+  height: 302rpx;
+  margin: 0 auto;
+}
+.search .goodsList .sortlist .item .name {
+  margin: 15rpx 0 22rpx 0;
+  text-align: center;
+  padding: 0 20rpx;
+  font-size: 24rpx;
+}
+.search .goodsList .sortlist .item .price {
+  text-align: center;
+  font-size: 30rpx;
+  color: #b4282d;
+}
+.search .goodsList .sortlist .item:nth-child(2n) {
+  border-right: none;
+}
+.search .goodsList .sortlist .item.active:nth-last-child(1) {
+  border-bottom: none;
+}
+.search .goodsList .sortlist .item.active:nth-last-child(2) {
+  border-bottom: none;
+}
+.search .goodsList .sortlist .item.none:last-child {
+  border-bottom: none;
+}

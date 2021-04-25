@@ -1,0 +1,36 @@
+  <view class="cart">
+    <view class="top">
+      <view>30天无忧退货</view>
+      <view>48小时快速退款</view>
+      <view>满88元免邮费</view>
+    </view>
+    <view class="cartlist">
+      <view class="item" wx:for="{{listData}}" wx:key="index">
+        <view class="con">
+          <view class="left">
+            <view class="icon" bind:tap="changeColor"></view>
+            <view class="image">
+              <image src="{{item.list_pic_url}}" alt=""/>
+            </view>
+            <view class="info">
+              <p>{{item.goods_name}}</p>
+              <p>¥{{item.retail_price}}</p>
+            </view>
+          </view>
+          <view class="right">
+            <view class="num">x {{item.number}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="fixed">
+      <view class="left" bind:tap="allCheck" >
+        全选({{isCheckedNumber}})
+      </view>
+      <view class="right">
+        <view>¥{{allPrice}}</view>
+        <view bind:tap="orderDown">下单</view>
+      </view>
+    </view>
+  </view>

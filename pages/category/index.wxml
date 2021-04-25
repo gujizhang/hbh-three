@@ -1,0 +1,37 @@
+  <view class="category">
+    <view class="search" bind:tap="tosearch">
+      <view class="ser">
+        <text class="icon"></text>
+        <text>商品搜索，共239款好物</text>
+      </view>
+    </view>
+    <view class="content">
+      <scroll-view class="left" scroll-y="true">
+        <view class="iconText {{index === nowIndex ? 'active' : ''}}" 
+        bind:tap="selectItem" 
+        wx:for="{{listData}}" 
+        wx:key="index" 
+        
+        id="{{index}}"
+        >
+          {{item.name}}
+        </view>
+      </scroll-view>
+      <scroll-view class="right" scroll-y="true">
+        <view class="banner">
+          <image src="{{detailData.banner_url}}" alt=""/>
+        </view>
+        <view class="title">
+          <text>-</text>
+          <text>{{detailData.name}}分类</text>
+          <text>-</text>
+        </view>
+        <view class="bottom">
+          <navigator class="item" bind:tap="categoryList" wx:for="{{detailData.subList}}" wx:key="index" url="../categroylist/index?id={{item.id}}">
+            <image src="{{item.wap_banner_url}}" alt=""/>
+            <text>{{item.name}}</text>
+          </navigator>
+        </view>
+      </scroll-view>
+    </view>
+  </view>

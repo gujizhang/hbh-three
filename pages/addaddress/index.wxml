@@ -1,0 +1,28 @@
+  <view class="address">
+    <scroll-view scroll-y="true" class="addcont" style="height: 100%">
+      <view class="item" wx:if="{{listData}} ">
+        <view class="list" wx:for="{{listData}}" wx:key="index" >
+          <view class="addresslist" id="{{item.id}}" bind:tap="selAddress">
+            <view>
+              <text>{{item.name}}</text>
+              <view class="moren" wx:if="{{item.is_default}}">默认</view>
+            </view>
+            <view class="info" >
+              <text>{{item.mobile}}</text>
+              <text>{{item.address+item.address_detail}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="center" wx:else>
+        <text>收货地址在哪里?</text>
+      </view>
+    </scroll-view>
+
+    <view class="bottom">
+
+      <view bind:tap="wxaddress">一键导入微信地址</view>
+       <view class="" bind:tap="getAddressList">刷新地址</view>
+    </view>
+  </view>

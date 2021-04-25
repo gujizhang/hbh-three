@@ -1,0 +1,72 @@
+
+   <view class="search">
+    <view class="head">
+      <view>
+       <image class="search_icon" src="../../icons/searchicon.png" mode="widthFix" ></image>
+        <input type="text" confirm-type="search"   bindconfirm="searchWords" placeholder="商品搜索"/>
+       
+      </view>
+      <view bind:tap="cancel">取消</view>
+    </view>
+    <view class="searchtips" wx:if="{{words}}">
+      <view wx:if="{{tipsData.length != 0}}">
+        <view wx:for="tipsData" wx:key="index" bind:tap="searchWords">
+          {{item.name}}
+        </view>
+      </view>
+      <view class="nogoods" wx:else>数据库暂无此类商品...</view>
+    </view>
+
+    <view class="history" wx:if="{{historyData.length!==0}}">
+      <view class="t">
+        <view class="contain">
+            <view>
+                历史记录
+            </view>
+              
+        </view>
+        <view bind:tap="clearHistory">
+            <view>
+                点这里清空历史记录
+            </view>
+              
+        </view>
+      </view>
+      <view class="cont">
+        <view wx:for="{{historyData}}" wx:key="index" id="{{item.keyword}}" bind:tap="searchWordsElse">
+          {{item.keyword}}
+        </view>
+      </view>
+    </view>
+
+    <view class="history hotsearch">
+      <view class="t">
+        <view  class="contain">
+            <view>
+            热门搜索
+            </view>
+        </view>
+      </view>
+      <view class="cont">
+        <view wx:for="{{hotData}}" wx:key="index" class="{{item.is_hot === 1?active: ''}}" bind:tap="searchWords">
+          {{item.keyword}}
+        </view>
+      </view>
+    </view>
+
+    <!-- 商品列表 -->
+    <view class="goodsList" wx:if="{{listData.length!==0}}">
+      <view class="sortnav">
+        <view bind:tap="changeTab" id="{{0}}" class="{{0 == nowIndex ? 'active' : ''}} allin">综合</view>
+        <view bind:tap="changeTab" id="{{1}}" class="{{1 == nowIndex ? 'active' : ''}} price" >价格</view>
+        <view bind:tap="changeTab" id="{{2}}" class="{{2 == nowIndex ? 'active' : ''}} cat">分类</view>
+      </view>
+      <view class="sortlist">
+        <view bind:tap="goodsDetail" class="item" id="{{item.id}}" wx:for="{{listData}}" wx:key="index">
+          <image src="{{item.list_pic_url}}" alt=""/>
+          <view class="name">{{item.name}}</view>
+          <view class="price">¥{{item.retail_price}}</view>
+        </view>
+      </view>
+    </view>
+  </view> 

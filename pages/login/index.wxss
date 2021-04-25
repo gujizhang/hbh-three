@@ -1,0 +1,10 @@
+view {
+  width: 100vw;
+  height: 100vh;
+  background-color: #07a16b;
+}
+view .getinfo .image {
+  margin-top: 30%;
+  width: 70%;
+  margin-left: 15%;
+}

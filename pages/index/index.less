@@ -1,0 +1,281 @@
+page {
+  background-color: rgb(239, 239, 245);
+}
+
+view {
+  --themeColor: #2DAF62;
+}
+
+SearchInput {
+  position: relative;
+  top: 0rpx;
+  width: 100%;
+  z-index: 9;
+}
+
+.index_swiper {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10rpx;
+  margin-top: 50rpx;
+  background-color: #cedad2;
+  border-radius: 20rpx;
+
+  image {
+    border-radius: 20rpx;
+  }
+
+  justify-content: center;
+
+}
+
+.index_channle {
+  display: flex;
+
+  navigator {
+    border-width: 4rpx;
+    border-color: rgb(57, 153, 57);
+    border-style: solid;
+    padding: 23rpx;
+    flex: 1;
+    margin: 10rpx;
+    border-radius: 104rpx;
+    background-color: #c2ddcd;
+
+    image {
+      width: 100%;
+    }
+
+    .cate_name {
+      text-align: center;
+      justify-content: center;
+      color: #0a6d32;
+    }
+  }
+}
+
+.index_floor {
+  display: flex;
+  flex-wrap: wrap;
+
+  .floor_group {
+    width: 45%;
+    color: #6c6e6d;
+    margin: 20rpx auto;
+
+    image {
+      border-radius: 10rpx;
+    }
+
+    background-color: rgb(182, 223, 209);
+    padding: 10rpx;
+    border-radius: 10rpx;
+    border-width:4px;
+    border-color: lawngreen;
+    border-style:solid;
+  }
+
+  border-radius: 10rpx;
+
+  width: 95%;
+  margin: 10rpx auto;
+}
+
+.index_newgoods {
+  .index_title_newgoods {
+    color: #848885;
+    font-size: 40rpx;
+    margin: 0 auto;
+    margin-left: 20px;
+  }
+
+  .index_newgoods_list {
+    display: flex;
+    flex-wrap: wrap;
+    color: rgb(186, 194, 201);
+    justify-content: center;
+
+    .floor_name {
+      color: #6c6e6d;
+      margin: 20rpx auto;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      image {
+        border-radius: 10rpx;
+      }
+
+      padding: 10rpx;
+      border-radius: 10rpx;
+    }
+
+    navigator {
+      background-color: white;
+      width: 45%;
+      margin: 10rpx;
+      border-radius: 30rpx;
+      padding: 10rpx;
+    }
+
+    border-radius: 10rpx;
+    width: 95%;
+    margin: 10rpx auto;
+
+    .retail_price {
+      color: brown;
+    }
+
+    .goods_brief {
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
+
+.index_hotGoods {
+  .index_title_hotGoods {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #848885;
+    font-size: 40rpx;
+    margin: 0 auto;
+    margin-left: 20px;
+  }
+
+  .index_newgoods_list {
+    display: flex;
+    flex-wrap: wrap;
+    color: rgb(186, 194, 201);
+
+    .floor_name {
+      color: #6c6e6d;
+      margin: 20rpx auto;
+
+      image {
+        border-radius: 10rpx;
+      }
+
+      padding: 10rpx;
+      border-radius: 10rpx;
+    }
+
+    navigator {
+      background-color: white;
+      width: 45%;
+      margin: 10rpx;
+      border-radius: 30rpx;
+      padding: 10rpx;
+    }
+
+    border-radius: 10rpx;
+    width: 95%;
+    margin: 10rpx auto;
+
+    .retail_price {
+      color: brown;
+    }
+
+    .goods_brief {
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
+
+.index_special {
+  .index_title_hotGoods {
+    color: #848885;
+    font-size: 40rpx;
+    margin: 0 auto;
+    margin-left: 20px;
+  }
+
+  .index_newgoods_list {
+    display: flex;
+    flex-direction: row;
+    overflow: scroll;
+    color: rgb(186, 194, 201);
+
+    navigator {
+      width: 50%;
+      margin: 10rpx;
+      background-color: white;
+      border-radius: 30rpx;
+      padding: 10rpx;
+      .floor_name {
+        color: #6c6e6d;
+        margin: 20rpx auto;
+        padding: 10rpx;
+        border-radius: 10rpx;
+      }
+      image {
+        border-radius: 10rpx;
+        height: 180rpx;
+        overflow-x: hidden;
+      }
+    }
+
+    border-radius: 10rpx;
+    width: 95%;
+    margin: 10rpx auto;
+
+    .retail_price {
+      color: brown;
+    }
+
+    .goods_brief {
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
+
+.index_newcategory {
+  .index_title_newcategory {
+    color: #848885;
+    font-size: 40rpx;
+    margin: 0 auto;
+    margin-left: 20px;
+  }
+
+  .cate_name {
+    color: #6c6e6d;
+    margin: 20rpx auto;
+
+    image {
+      border-radius: 10rpx;
+    }
+
+    padding: 10rpx;
+    border-radius: 10rpx;
+  }
+
+  .newgoods_group {
+    display: flex;
+    flex-wrap: wrap;
+    color: rgb(186, 194, 201);
+
+    navigator {
+      background-color: white;
+      width: 45%;
+      margin: 10rpx;
+      border-radius: 30rpx;
+      padding: 10rpx;
+    }
+
+    border-radius: 10rpx;
+    width: 95%;
+    margin: 10rpx auto;
+
+    .retail_price {
+      color: brown;
+    }
+  }
+}

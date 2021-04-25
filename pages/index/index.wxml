@@ -1,0 +1,131 @@
+<!--pages/goods_list/index.wxml-->
+<view class="pro_index">
+  <SearchInput></SearchInput>
+
+  <view class="index_swiper">
+    <swiper autoplay indicator-dots circular >
+      <swiper-item
+      wx:for="{{swiperlist}}"
+      wx:key="id"
+      >
+        <navigator >
+          <image mode="widthFix" src="{{item.image_url}}"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <view class="index_channle">
+    <navigator 
+    wx:for="{{channel}}"
+    wx:key="name"
+    url="/pages/categroylist/index?id={{item.id}}"
+    >
+      <image mode="widthFix" src="{{item.icon_url}}" ></image>
+      <view class="cate_name">{{item.name}}</view>
+    </navigator>
+  </view>
+
+  <view class="index_floor">
+    <navigator class="floor_group"
+    wx:for="{{brandList}}"
+    wx:key="name"
+    >
+      <image mode="widthFix" src="{{item.new_pic_url}}" ></image>
+      <view class="floor_name">{{item.name}}</view>
+    </navigator>
+  </view>
+
+  <view class="index_newgoods">
+    <view class="index_title_newgoods">
+      <p>新商品</p>
+    </view>
+    <view class="index_newgoods_list">
+      <navigator class="newgoods_group"
+      wx:for="{{newGoods}}"
+      wx:key="name"
+      url="../goods_detail/index?id={{item.id}}"
+      >
+        <view class="floor_name"> {{item.name}}</view>
+        <image mode="widthFix" src="{{item.list_pic_url}}" ></image>
+        <view class="goods_brief">{{item.goods_brief}}</view>
+        <view class="retail_price">{{item.retail_price}}￥起</view>
+      </navigator>
+    </view>
+  </view>
+    
+ 
+  <view class="index_hotGoods">
+    <view class="index_title_hotGoods">
+      <p>热门商品</p>
+    </view>
+    <view class="index_newgoods_list hotGoods">
+      
+      <navigator class="newgoods_group"
+      wx:for="{{hotGoods}}"
+      wx:key="name"
+      url="../goods_detail/index?id={{item.id}}"
+      >
+        <view class="floor_name"> {{item.name}}</view>
+        <image mode="widthFix" src="{{item.list_pic_url}}" ></image>
+        <view class="goods_brief">{{item.goods_brief}}</view>
+        <view class="retail_price">{{item.retail_price}}￥起</view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class="index_special topicList">
+    <view class="index_title_hotGoods">
+      <p>专题精选</p>
+    </view>
+    <view class="index_newgoods_list hotGoods">
+      
+      <navigator class="newgoods_group"
+      wx:for="{{topicList}}"
+      wx:key="name"
+      url="../topic/index?id={{item.id}}"
+      >
+        <view class="floor_name"> {{item.title}}</view>
+        <image mode="heightFix" src="{{item.item_pic_url}}" ></image>
+        <view class="goods_brief">{{item.subtitle}}</view>
+        <view class="retail_price">{{item.price_info}}￥起</view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class="index_newcategory">
+    <view class="index_title_newcategory">
+      <p>好物</p>
+    </view>
+    <view class="index_newcategory_list">
+      
+      <view class="newcategory_group"
+      wx:for="{{newCategoryList}}"
+      wx:key="name"
+      wx:for-item="item1"
+      >
+        <view class="cate_name">
+          {{item1.name}}
+        </view>
+       <view class="newgoods_group">
+          <navigator 
+            wx:for="{{item1.goodsList}}"
+            wx:key="name"
+            wx:for-item="item2"
+            wx:for-index="id"
+            url="../goods_detail/index?id={{item2.id}}"
+            class="123{{item2.id}}"
+            
+            >     
+              <view class="name"> {{item2.name}}</view>
+              <image mode="widthFix" src="{{item2.list_pic_url}}" ></image>
+              <view class="retail_price">{{item2.retail_price}}￥起</view>
+        </navigator>
+       </view>
+         
+      </view>
+    </view>
+  </view>
+
+
+</view>

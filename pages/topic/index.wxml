@@ -1,0 +1,21 @@
+  <view class="topic">
+    <view class="list">
+      <navigator 
+      class="na"
+      wx:for="{{topicList}}" 
+      key="{{index}}" 
+      bind:tap="topicDetail"
+      id="{{item.id}}"
+      url='/pages/topicdetail/index?id={{item.id}}'
+      >
+        <view class="t-image">
+          <image mode="widthFix" src="{{item.scene_pic_url}}" alt=""/>
+        </view>
+        <view class="info">
+          <view class="ti">{{item.title}}</view>
+          <view class="su">{{item.subtitle}}</view>
+          <view class="pr">{{item.price_info}}元起</view>
+        </view>
+      </navigator>
+    </view>
+  </view>

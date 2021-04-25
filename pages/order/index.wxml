@@ -1,0 +1,59 @@
+<view class="order">
+    <view class="address {{address.name}}" wx:if="{{address.name}}" bind:tap="toAddressList">
+      <view class="item">
+        <view class="list">
+          <view class="addresslist">
+            <view>
+              <span>{{address.name}}</span>
+              <view class="moren">默认</view>
+            </view>
+            <view class="info">
+              <p>{{address.mobile}}</p>
+              <p>{{address.address+address.address_detail}}</p>
+            </view>
+            <view></view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="seladdress {{address.name}}" wx:else bind:tap="toAdd">请选择默认地址</view>
+
+    <view class="orderbox">
+      <view class="item">
+        <view>商品合计</view>
+        <view>¥{{allprice}}</view>
+      </view>
+      <view class="item">
+        <view>运费</view>
+        <view>免运费</view>
+      </view>
+      <view class="item">
+        <view>优惠券</view>
+        <view>暂无</view>
+      </view>
+    </view>
+
+    <view class="cartlist">
+      <view class="item" wx:for="{{listData}}" wx:key="index">
+        <view class="con">
+          <view class="left">
+            <view class="image">
+              <image src="{{item.list_pic_url}}" alt=""/>
+            </view>
+            <view class="info">
+              <p>{{item.goods_name}}</p>
+              <p>¥{{item.retail_price}}</p>
+            </view>
+          </view>
+          <view class="right">
+            <view class="num">x{{item.number}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="bottom">
+      <view>实付：¥ {{allprice}}</view>
+      <view class="pay" bind:tap="pay">支付</view>
+    </view>
+  </view>

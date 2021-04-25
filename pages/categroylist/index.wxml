@@ -1,0 +1,19 @@
+  <view class="categoryList">
+    <scroll-view scroll-x="true" class="head" scroll-left="{{scrollLeft}}">
+      <view bind:tap="changeTab" id="{{item.id}}" wx:for="{{navData}}" wx:key="index" class="{{nowIndex == item.id ? 'active' : ''}}">
+        {{item.name}}
+      </view>
+    </scroll-view>
+    <view class="info">
+      <text>{{currentNav.name}}</text>
+      <text>{{currentNav.front_desc}}</text>
+    </view>
+    <view class="list" wx:if="{{goodsList.length !== 0}}">
+      <view class="item" wx:for="{{goodsList}}" wx:key="index" bind:tap="goodsDetail" id="{{item.id}}">
+        <image src="{{item.list_pic_url}}" alt=""/>
+        <text class="name">{{item.name}}</text>
+        <text class="price">¥ {{item.retail_price}}</text>
+      </view>
+    </view>
+    <view class="none" wx:else>数据库暂无数据...</view>
+  </view>

@@ -1,0 +1,10 @@
+    <view class="fixed">
+      <checkbox class="left" bind:tap="allCheck" value="{{allcheck}}">
+        全选({{isCheckedNumber}})
+      </checkbox>
+      <view class="right">
+        <view>¥{{allPrice}}</view>
+      
+        <view bind:tap="orderDown">下单</view>
+      </view>
+    </view>
