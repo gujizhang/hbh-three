@@ -83,6 +83,35 @@
           "pathName": "pages/index/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/collect/index",
+          "pathName": "pages/collect/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/collect/index",
+          "pathName": "pages/collect/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/feedback/index",
+          "pathName": "pages/feedback/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my_buy_list/index",
+          "pathName": "pages/my_buy_list/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/help_center/index",
+          "pathName": "pages/help_center/index",
+          "scene": null
         }
       ]
     }

@@ -81,14 +81,16 @@ Page({
     this.setData({
       collectFlag : !this.data.collectFlag
     })
+
     const data = await post('/collect/addcollect', {
       goodsId: this.data.goodsId,
       openId:this.data.openId
     })
+    console.log(data)
   },
   toCart () {
-    this.wx.switchTab({
-      url: '/pages/cart/main'
+    wx.switchTab({
+      url: '/pages/cart/index'
     });  
   },
   async buy () {
@@ -191,7 +193,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+   
   },
 
   /**
@@ -212,7 +214,13 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
+    this.setData({
+      openId :  app.globalData.userInfo.openid || '',
+      id : options.id
+    })
 
+   
+    this.goodsDetail()
   },
 
   /**

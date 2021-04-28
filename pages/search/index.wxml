@@ -2,7 +2,7 @@
    <view class="search">
     <view class="head">
       <view>
-       <image class="search_icon" src="../../icons/searchicon.png" mode="widthFix" ></image>
+       <icon class="iconfont icon-sousuo" ></icon>
         <input type="text" confirm-type="search"   bindconfirm="searchWords" placeholder="商品搜索"/>
        
       </view>

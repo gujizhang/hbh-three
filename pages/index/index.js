@@ -36,6 +36,21 @@ Page({
     })
 
   },
+  onShow: function () {
+    this.getDataIndex();
+    this.setData({
+      openId :  app.globalData.userInfo.openid || '',
+      userInfo:  app.globalData.userInfo||''
+    })
+  },
+  onPullDownRefresh: function () {
+    this.getDataIndex();
+    this.setData({
+      openId :  app.globalData.userInfo.openid || '',
+      userInfo:  app.globalData.userInfo||''
+    })
+  },
+
   async getDataIndex(){
     const data = await get('/index/index') // http://localhost:5757/lm/index/index
     console.log(data)

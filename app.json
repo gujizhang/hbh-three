@@ -12,11 +12,13 @@
     "pages/search/index",
     "pages/user/index",
     "pages/feedback/index",
-    "pages/auth/index",
     "pages/pay/index",
     "pages/addaddress/index",
     "pages/topic/index",
-    "pages/topic_detail/index"
+    "pages/topic_detail/index",
+    "pages/help_center/index",
+    "pages/my_buy_list/index",
+    "pages/customer/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -56,6 +58,10 @@
         "selectedIconPath": "icons/my-o.png"
       }
     ]
+  },
+  "useExtendedLib": {
+    "kbone": true,
+    "weui": true
   },
   "sitemapLocation": "sitemap.json"
 }

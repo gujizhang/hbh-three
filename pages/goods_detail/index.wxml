@@ -30,7 +30,7 @@
         </view>
       </view>
       <view  class="section-nav" bind:tap="showType">
-        <image class="" src="../../icons/选择.png" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+        <icon class="iconfont icon-xuanze"  />
           
         <view>请选择规格数量</view>
       </view>
@@ -107,13 +107,17 @@
     <view class="bottom-fixed">
       <view class="collect-box" bind:tap="collect">
         <view class="collect">
-             <image class="" src="../../icons/收藏.png" mode="widthFix"  />
+             <icon wx:if="{{!collectFlag}}" class="iconfont icon-shoucang" src="../../icons/收藏.png" mode="widthFix"  />
+             <icon wx:else class="iconfont icon-xingzhuanggongnengtubiao-" src="../../icons/收藏active.png" mode="widthFix"  />
           </view>
       </view>
       <view class="car-box" bind:tap="toCart">
         <view class="car" >
           <span>{{allnumber}}</span>
-          <image src="/../../icons/购物.png" alt=""></image>
+          <icon class="iconfont icon-gouwuche" color="#3f740e">
+            
+          </icon>
+            
         </view>
       </view>
       <view catch:tap="buy">立即购买</view>

@@ -8,8 +8,8 @@
               <view class="moren">默认</view>
             </view>
             <view class="info">
-              <p>{{address.mobile}}</p>
-              <p>{{address.address+address.address_detail}}</p>
+              <text>{{address.mobile}}</text>
+              <text>{{address.address+address.address_detail}}</text>
             </view>
             <view></view>
           </view>

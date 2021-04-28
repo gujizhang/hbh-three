@@ -83,6 +83,7 @@ Page({
     })
 
     this.getAddressList();
+    wx.startPullDownRefresh()
   },
 
   /**

@@ -68,7 +68,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    if (wx.getStorageSync('addressId')) {
+      console.log("我有缓存")
+      this.setData({
+        addressId : wx.getStorageSync('addressId')
+      })
+    }
+    this.setData({
+      openId : app.globalData.userInfo.openid || '',
+    })
+    console.log("到这了")
+    this.getDetail()
+    wx.startPullDownRefresh()
   },
   
 
@@ -94,6 +105,7 @@ Page({
     })
     console.log("到这了")
     this.getDetail()
+    wx.startPullDownRefresh()
   },
 
   /**
@@ -114,7 +126,18 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    if (wx.getStorageSync('addressId')) {
+      console.log("我有缓存")
+      this.setData({
+        addressId : wx.getStorageSync('addressId')
+      })
+    }
+    this.setData({
+      openId : app.globalData.userInfo.openid || '',
+    })
+    console.log("到这了")
+    this.getDetail()
+    wx.startPullDownRefresh()
   },
 
   /**

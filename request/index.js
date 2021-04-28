@@ -20,8 +20,8 @@ export function formatTime (date) {
 
 
 // ------------------------请求的封装
-
-const host = "http://192.168.43.39:5757/lm"
+//const host = "http://localhost:5757"
+const host = "https://gujizhang.cn.utools.club"
 export { host };
 
 // 请求封装
@@ -53,7 +53,7 @@ function request (url, method, data, header = {}) {
 }
 
 export function get (url, data) {
-  //console.log(data)
+  console.log(data)
   return request(url, 'GET', data)
 }
 export function post (url, data) {

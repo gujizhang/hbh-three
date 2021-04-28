@@ -92,7 +92,9 @@
   justify-content: center;
   align-items: center;
 }
-.goods .sgs .section-nav image {
+.goods .sgs .section-nav icon {
+  color: #28b462c0;
+  font-size: 60rpx;
   width: 60rpx;
 }
 .goods .sgs .section-nav view:nth-child(0) {
@@ -303,6 +305,8 @@
 .goods .bottom-fixed .collect-box {
   height: 100rpx;
   width: 162rpx;
+  color: #4e970a;
+  margin-top: -15rpx;
   border: 1rpx solid #f4f4f4;
   display: flex;
   align-items: center;
@@ -347,12 +351,13 @@
   line-height: 28rpx;
   border-radius: 50%;
 }
-.goods .bottom-fixed .car-box .car image {
+.goods .bottom-fixed .car-box .car icon {
   display: block;
   height: 44rpx;
   width: 44rpx;
   position: absolute;
-  top: 10rpx;
+  top: -10rpx;
+  color: #178b0d;
   left: 0;
 }
 .goods .bottom-fixed view:nth-child(3) {

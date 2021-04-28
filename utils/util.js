@@ -9,6 +9,21 @@ const formatTime = date => {
   return `${[year, month, day].map(formatNumber).join('/')} ${[hour, minute, second].map(formatNumber).join(':')}`
 }
 
+
+export const showModal=({content})=>{
+  return new Promise((resolve,reject)=>{
+    wx.showModal({
+      title: '提示',
+      content: content,
+      success :(res) =>{
+        resolve(res);
+      },
+      fail:(err)=>{
+        reject(err);
+      }
+    })
+  })
+}
 export function getCurrentPageUrlWithArgs() {
   const pages = getCurrentPages()
   const currentPage = pages[pages.length - 1]

@@ -1,0 +1,40 @@
+page {
+  background-color: #e9e7e7;
+  height: 100vh;
+}
+.contain {
+  border-radius: 50rpx;
+  padding: 30rpx;
+  color: #da591d;
+  font-size: 30rpx;
+  margin: 30rpx auto;
+  width: 95%;
+  background-color: white;
+}
+.contain .content {
+  background-color: #ffffff;
+  color: #128b12;
+  display: flex;
+  flex-direction: column;
+}
+.contain .content navigator {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.contain .content navigator view:nth-child(1) {
+  margin: 30rpx auto;
+  width: 96vw;
+  height: 100rpx;
+  display: block;
+}
+.contain .content navigator view:nth-child(2) {
+  margin: 30rpx auto;
+  width: 96vw;
+  color: #0044ff;
+  height: 100rpx;
+  display: block;
+}
+.contain .content navigator icon {
+  margin-top: -70rpx;
+}

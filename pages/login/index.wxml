@@ -1,10 +1,10 @@
 <!--pages/login/index.wxml-->
-<view>
+<view class="content">
     <view class="getinfo"  bind:tap="getinfo">
         <view class="contain">
-        <image class="image" src="../../icons/外星人.png" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+        <image class="image" src="https://z3.ax1x.com/2021/04/26/gpuPpt.png" mode="widthFix" lazy-load="false" binderror="" bindload="" />
             
         </view>
-                    
+        <view class="info">点击这里进行登录 </view>
     </view>
 </view>

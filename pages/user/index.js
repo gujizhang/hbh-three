@@ -11,33 +11,32 @@ Page({
       {
         title: "我的订单",
         icon: "icon-xiazai",
-        url: ""
-        
+        url: "/pages/my_buy_list/index"
       },
       {
         title: "我的收藏",
         icon: "icon-xihuan",
-        url: "/pages/collectlist/main"
+        url: "/pages/collect/index"
       },
       {
         title: "地址管理",
         icon: "icon-lishi",
-        url: "/pages/address/main"
+        url: "/pages/addaddress/index"
       },
       {
         title: "联系客服",
         icon: "icon-xiaoxi",
-        url: ""
+        url: "/pages/customer/index"
       },
       {
         title: "帮助中心",
         icon: "icon-anquan",
-        url: ""
+        url: "/pages/help_center/index"
       },
       {
         title: "意见反馈",
         icon: "icon-shezhi",
-        url: "/pages/feedback/main"
+        url: "/pages/feedback/index"
       }
     ],
     avator: 'http://yanxuan.nosdn.127.net/8945ae63d940cc42406c3f67019c5cb6.png',
@@ -45,10 +44,10 @@ Page({
     userInfo: {},
     Listids: []
   },
-  goTo (url) {
-    console.log(123)
+  goTo (event) {
+    console.log(event)
     wx.navigateTo({
-      url: url
+      url: this.data.listData[event.currentTarget.id].url
     });
       
   },
@@ -74,7 +73,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
- 
+    this.setData({
+      openId :  app.globalData.userInfo.openid || '',
+      avator:app.globalData.userInfo.avatarUrl || '',
+      userInfo:app.globalData.userInfo
+    })
   },
 
   /**
@@ -95,7 +98,11 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    this.setData({
+      openId :  app.globalData.userInfo.openid || '',
+      avator:app.globalData.userInfo.avatarUrl || '',
+      userInfo:app.globalData.userInfo
+    })
   },
 
   /**

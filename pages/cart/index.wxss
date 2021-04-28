@@ -26,9 +26,9 @@
   margin-bottom: 110rpx;
 }
 .cart .cartlist .item {
-  padding: 20rpx 0;
-  border-bottom: 1rpx solid #f4f4f4;
-  height: 166rpx;
+  padding: 20rpx 20rpx;
+  border-bottom: 1rpx solid #cfcfcf;
+  height: 250rpx;
   position: relative;
 }
 .cart .cartlist .item .con {
@@ -42,14 +42,18 @@
   align-items: center;
   width: 80%;
 }
-.cart .cartlist .item .con .left .icon {
-  height: 125rpx;
+.cart .cartlist .item .con .left mp-checkbox-group {
+  height: 180rpx;
   width: 34rpx;
-  background-size: 34rpx 34rpx;
+  display: inline;
+  border-radius: 20rpx;
   margin: 0 20rpx;
 }
-.cart .cartlist .item .con .left .icon.active {
-  background-size: 34rpx 34rpx;
+.cart .cartlist .item .con .left mp-checkbox-group .newstyle {
+  height: 60rpx;
+  width: 60rpx;
+  margin-right: 10rpx;
+  padding-left: 0;
 }
 .cart .cartlist .item .con .left .image {
   height: 125rpx;
@@ -71,6 +75,24 @@
 .cart .cartlist .item .con .right {
   padding-right: 50rpx;
 }
+.cart .cartlist .item .con .right .num {
+  padding: 30%;
+}
+.cart .cartlist .item .con .right .num_tool {
+  display: flex;
+}
+.cart .cartlist .item .con .right .num_tool view {
+  background-color: #11af40;
+  width: 50rpx;
+  height: 50rpx;
+  font-size: 30rpx;
+  font-weight: bolder;
+  color: azure;
+  text-align: center;
+  align-items: center;
+  margin-right: 10rpx;
+  border-radius: 25rpx;
+}
 .cart .cartlist .item .delete {
   position: absolute;
   width: 100rpx;
@@ -78,7 +100,7 @@
   right: -100rpx;
   text-align: center;
   height: 100%;
-  background: #79e017;
+  background: #3f740e;
   color: #fff;
   transition: all 200ms ease;
   display: flex;

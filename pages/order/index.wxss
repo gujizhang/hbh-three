@@ -46,7 +46,7 @@
   padding: 0 20rpx;
   flex: 1;
 }
-.order .address .item .addresslist .info p:nth-child(2) {
+.order .address .item .addresslist .info text:nth-child(2) {
   margin-top: 5rpx;
   color: #666;
   overflow: hidden;

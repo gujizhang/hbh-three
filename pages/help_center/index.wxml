@@ -1,0 +1,10 @@
+<view class="contain">
+    热点问题
+    <view class="content">
+        <navigator wx:for="{{wordList.words}}" class="" target="" url="" hover-class="navigator-hover" open-type="navigate">
+            <view>{{item.question}}</view>
+            <view>{{item.ans}}</view>
+            <icon class="iconfont icon-youbian" />
+        </navigator>
+    </view>
+</view>

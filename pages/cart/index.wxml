@@ -1,37 +1,43 @@
-  <view class="cart">
-    <view class="top">
-      <view>我的商品</view>
-    </view>
-    <view class="cartlist">
-      <view class="item" wx:for="{{listData}}" wx:key="index">
-        <view class="con">
-          <view class="left">
-            <view class="icon" bind:tap="changeColor"></view>
-            <view class="image">
-              <image src="{{item.list_pic_url}}" alt=""/>
-            </view>
-            <view class="info">
-              <p>{{item.goods_name}}</p>
-              <p>¥{{item.retail_price}}</p>
-            </view>
+<view class="cart">
+  <view class="top">
+    <view>我的商品</view>
+  </view>
+  <view class="cartlist">
+    <view class="item" wx:for="{{listData}}" wx:key="index">
+      <view  class="con">
+        <view class="left">
+          <mp-cells>
+            <mp-checkbox-group data-id="{{item.goods_id}}" catch:change="handeItemChange">
+              <mp-checkbox label="" class="newstyle" ext-class="newstyle" value="item.retail_price" color="rgb(114, 160, 105)" checked="{{item.checked}}"></mp-checkbox>
+            </mp-checkbox-group>
+          </mp-cells>
+          <navigator url='/pages/goods_detail/index?id={{item.goods_id}}' class="image">
+            <image src="{{item.list_pic_url}}" alt="" />
+          </navigator>
+          <view class="info">
+            <p>{{item.goods_name}}</p>
+            <p>¥{{item.retail_price}}</p>
           </view>
-          <view class="right">
-            <view class="num">x {{item.number}}</view>
+        </view>
+        <view class="right">
+          <view class="num">x {{item.number}}</view>
+          <view class="num_tool">
+            <view catch:tap="handleItemNumEdit" data-id="{{item.goods_id}}" data-operation="{{-1}}" class="num_edit">
+              -
+            </view>
+            <view catch:tap="handleItemNumEdit" data-id="{{item.goods_id}}" data-operation="{{1}}" class="num_edit">
+              +
+            </view>
           </view>
         </view>
       </view>
     </view>
-
-    <view class="fixed">
-      <checkbox class="left" bind:tap="allCheck" value="{{allcheck}}">
-        全选({{CheckedNumber}})
-      </checkbox>
-      <view class="right">
-        <view>¥{{allPrice}}</view>
-      
-        <view bind:tap="orderDown">下单</view>
-      </view>
+  </view>
+  <view class="fixed">
+    <checkbox class="left" bind:tap="allCheck" checked="{{allcheck}}">全选({{CheckedNumber}})</checkbox>
+    <view class="right">
+      <view>¥{{allPrice}}</view>
+      <view bind:tap="orderDown">下单</view>
     </view>
   </view>
-  
-
+</view>

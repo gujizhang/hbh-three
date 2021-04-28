@@ -1,0 +1,27 @@
+<Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange">
+    <view class="order_main">
+        <view wx:for="{{orders}}" wx:for-item="item1" wx:for-index="index1" wx:key="index" class="order_item">
+            <view class="order_no_row">
+                <view class="order_no_text">订单编号</view>
+                <view class="order_no_value">{{index1}}</view>
+            </view>
+            <view class="order_price_row">
+                <view class="order_price_text">订单价格</view>
+                <view class="order_price_value">￥{{item1.order_price}}</view>
+            </view>
+            <view class="order_time_row">
+                <view class="order_time_text">订单日期</view>
+                <view class="order_time_value">{{item1.create_time_cn}}</view>
+            </view>
+            <view class="every">
+                <view wx:for="{{item1}}" wx:for-item="value" wx:for-index="key" wx:key="value" class="detail">
+                    <navigator url='/pages/goods_detail/index?id={{value.id}}' class="content">
+                        <view class="name">{{value.name}}</view>
+                        <image mode="heightFix" class="order_time_value" src="{{value.list_pic_url}}"></image>
+                        <view class="value">{{value.retail_price}}</view>
+                    </navigator>
+                </view>
+            </view>
+        </view>
+    </view>
+</Tabs>

@@ -1,10 +1,17 @@
-view {
+.content {
   width: 100vw;
   height: 100vh;
   background-color: #07a16b;
 }
-view .getinfo .image {
+.content .getinfo .image {
   margin-top: 30%;
   width: 70%;
   margin-left: 15%;
+}
+.content .getinfo .info {
+  margin-left: 26%;
+  color: #f7fff7;
+  font-size: 40rpx;
+  font-weight: bolder;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }

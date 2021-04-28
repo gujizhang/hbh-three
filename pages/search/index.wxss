@@ -17,11 +17,8 @@
   align-items: center;
   background: #f4f4f4;
 }
-.search .head view:nth-child(1) image {
-  display: inline-block;
-  width: 31rpx;
-  height: 31rpx;
-  padding: 0 20rpx;
+.search .head view:nth-child(1) icon {
+  color: #00833b;
 }
 .search .head view:nth-child(1) input {
   display: inline-block;
